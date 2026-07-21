@@ -4,7 +4,7 @@
     --image-dimensions: 5%;
     --margin: 5vw;
     --font-size: .8rem;
-    --button-height: 15vw;
+    --button-height: clamp(140px, 15vw, 280px);
     --z-index-bg: -1;
     --z-index-nav: 1000;
 }
@@ -32,7 +32,6 @@ body:not(.is-preload) .floating-nav {
     background-color: var(--nav-background-color);
     z-index: 1000;
     transition: none;
-    z-index: 5;
     opacity: .95;
 }
 
@@ -61,6 +60,7 @@ body:not(.is-preload) .floating-nav {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .nav-button:hover {
@@ -78,6 +78,7 @@ body:not(.is-preload) .floating-nav {
     display: flex;
     align-items: center;
     height: 100%;
+    white-space: nowrap;
 }
 
 html, body {
@@ -104,7 +105,7 @@ html, body {
 
 .about-banner {
     background-color: var(--about-background-color);
-    width: 100vw;
+    width: 100%;
     min-height: 50vh;
     overflow-x: hidden;
     justify-content: center;
@@ -149,8 +150,8 @@ html, body {
 }
 
 .about-image {
-    width: 20vw;
-    height: 20vw;
+    width: clamp(150px, 20vw, 320px);
+    height: clamp(150px, 20vw, 320px);
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
@@ -317,18 +318,6 @@ html, body {
     color: rgba(240, 241, 255, 0.8);
 }
 
-@media (max-width: 768px) {
-    .content-section {
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .content-left,
-    .content-right {
-        padding: 0;
-    }
-}
-
 .description-section {
     margin: 3rem;
     margin-top: -3rem;
@@ -359,8 +348,8 @@ html, body {
 
 .carousel-item {
     flex: 0 0 auto;
-    width: 20vw;
-    height: 20vw;
+    width: clamp(160px, 20vw, 400px);
+    height: clamp(160px, 20vw, 400px);
 }
 
 .carousel-image {
@@ -418,11 +407,11 @@ html, body {
 }
 
 .project-button {
-    display: flex; 
-    align-items: center;
+    display: flex;
+    align-items: stretch;
     gap: 2rem;
     width: 80vw;
-    height: var(--button-height);
+    min-height: var(--button-height);
     max-width: 1800px;
     margin: 20px auto;
     padding: 0;
@@ -448,7 +437,8 @@ html, body {
 
 .project-image {
     width: var(--button-height);
-    height: var(--button-height);
+    height: auto;
+    min-height: var(--button-height);
     object-fit: cover;
     flex-shrink: 0;
 }
@@ -493,4 +483,87 @@ html, body {
 .portfolio-title, .project-button {
     position: relative;
     z-index: 2;
+}
+
+/* Responsive overrides — keep these at the end of the file so they win the cascade */
+@media (max-width: 768px) {
+    /* Compact nav so all five buttons fit on one row */
+    .nav-logo {
+        font-size: .8rem;
+        margin-left: 0;
+        padding-left: .75rem;
+    }
+
+    .nav-button {
+        padding: 0 .45rem;
+        font-size: .6rem;
+    }
+
+    .nav-buttons {
+        margin-right: .5rem;
+    }
+
+    /* Stack image above text on project pages */
+    .content-section {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .content-left,
+    .content-right {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .section-image {
+        width: 100%;
+    }
+
+    .project-banner {
+        margin: 4vw;
+        padding: 1.25rem;
+    }
+
+    /* Stack headshot above the about text */
+    .about-content {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 1.5rem;
+    }
+
+    .about-image {
+        width: 45vw;
+        height: 45vw;
+    }
+
+    /* Stack project cards: image on top, text below */
+    .project-button {
+        flex-direction: column;
+        align-items: stretch;
+        width: 88vw;
+        gap: 0;
+    }
+
+    .project-image {
+        width: 100%;
+        height: 50vw;
+        min-height: 0;
+    }
+
+    .project-info {
+        padding: 1rem 1.25rem 1.25rem;
+    }
+
+    .carousel-item {
+        width: 55vw;
+        height: 55vw;
+    }
+}
+
+@media (max-width: 380px) {
+    .nav-button {
+        padding: 0 .3rem;
+        font-size: .55rem;
+    }
 }

@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Max Song - Portfolio</title>
+		<title>Personal Projects - Max Song</title>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="assets/css/main.css">
         <link rel="stylesheet" href="assets/css/style.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css"></noscript>
@@ -36,7 +36,7 @@
 
                 <div class="content-section">
                     <div class="content-left">
-                        <img src="images/Personal Projects_PC_ModelAngle.jpg" alt="Project Image" class="section-image">
+                        <img loading="lazy" decoding="async" src="images/Personal Projects_PC_ModelAngle.jpg" alt="Project Image" class="section-image">
                     </div>
                     <div class="content-right">
                         <p class="section-description">
@@ -58,13 +58,13 @@
                         </p>
                     </div>
                     <div class="content-right">
-                        <img src="images/Personal Projects_PC_CAD.jpg" alt="Project Image" class="section-image">
+                        <img loading="lazy" decoding="async" src="images/Personal Projects_PC_CAD.jpg" alt="Project Image" class="section-image">
                     </div>
                 </div>
 
                 <div class="content-section">
                     <div class="content-left">
-                        <img src="images/Personal Projects_PC_WalletCAD.jpg" alt="Project Image" class="section-image">
+                        <img loading="lazy" decoding="async" src="images/Personal Projects_PC_WalletCAD.jpg" alt="Project Image" class="section-image">
                     </div>
                     <div class="content-right">
                         <p class="section-description">
@@ -81,7 +81,7 @@
 
                 <div class="content-section">
                     <div class="content-left">
-                        <img src="images/Personal Projects_L_CAD2.jpg" alt="Project Image" class="section-image">
+                        <img loading="lazy" decoding="async" src="images/Personal Projects_L_CAD2.jpg" alt="Project Image" class="section-image">
                     </div>
                     <div class="content-right">
                         <p class="section-description">
@@ -103,7 +103,7 @@
                         </p>
                     </div>
                     <div class="content-right">
-                        <img src="images/Personal Projects_L_CAD3.jpg" alt="Project Image" class="section-image">
+                        <img loading="lazy" decoding="async" src="images/Personal Projects_L_CAD3.jpg" alt="Project Image" class="section-image">
                     </div>
                 </div>
 
@@ -124,13 +124,13 @@
                         </p>
                     </div>
                     <div class="content-right">
-                        <img src="images/Personal Projects_SR_CAD.jpg" alt="Project Image" class="section-image">
+                        <img loading="lazy" decoding="async" src="images/Personal Projects_SR_CAD.jpg" alt="Project Image" class="section-image">
                     </div>
                 </div>
 
                 <div class="content-section">
                     <div class="content-left">
-                        <img src="images/Personal Projects_SR_3.jpg" alt="Project Image" class="section-image">
+                        <img loading="lazy" decoding="async" src="images/Personal Projects_SR_3.jpg" alt="Project Image" class="section-image">
                     </div>
                     <div class="content-right">
                         <p class="section-description">
@@ -148,6 +148,8 @@
                     Back to Top
                 </button> -->
 
+			</div>
+
 			<div id="bg"></div>
 
 			<script src="assets/js/jquery.min.js"></script>
@@ -155,49 +157,5 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script>
-            
-            function scrollToTop() {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            }
-            
-            document.addEventListener('DOMContentLoaded', function() {
-                const carousel = document.querySelector('.carousel-container');
-                const items = Array.from(carousel.querySelectorAll('.carousel-item'));
-                const itemWidth = items[0].offsetWidth;
-                const itemCount = items.length;
-                
-                carousel.querySelectorAll('.carousel-item').forEach(item => item.remove());
-                
-                const clonedItemsBefore = items.map(item => item.cloneNode(true));
-                const clonedItemsAfter = items.map(item => item.cloneNode(true));
-                const originalItems = items.map(item => item.cloneNode(true));
-                
-                clonedItemsBefore.forEach(item => carousel.appendChild(item));
-                originalItems.forEach(item => carousel.appendChild(item));
-                clonedItemsAfter.forEach(item => carousel.appendChild(item));
-                
-                carousel.scrollLeft = itemWidth * itemCount;
-                
-                carousel.addEventListener('wheel', (e) => {
-                    e.preventDefault();
-                    
-                    carousel.scrollLeft += (e.deltaX + e.deltaY)/2;
-                    
-                    const totalWidth = itemWidth * itemCount * 3;
-                    const currentPosition = carousel.scrollLeft;
-                    
-                    if (currentPosition >= itemWidth * itemCount * 2) {
-                        carousel.scrollLeft = currentPosition - (itemWidth * itemCount);
-                    } else if (currentPosition <= 0) {
-                        carousel.scrollLeft = currentPosition + (itemWidth * itemCount);
-                    }
-                });
-            });
-
-		</script>		
 	</body>
 </html>

@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Max Song - Portfolio</title>
+		<title>Song Leather - Max Song</title>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="assets/css/main.css">
         <link rel="stylesheet" href="assets/css/style.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css"></noscript>
@@ -33,7 +33,7 @@
 
                 <div class="content-section">
                     <div class="content-left">
-                        <img src="images/Song Leather_Sketches.jpg" alt="Project Image" class="section-image">
+                        <img loading="lazy" decoding="async" src="images/Song Leather_Sketches.jpg" alt="Project Image" class="section-image">
                     </div>
                     <div class="content-right">
                         <p class="section-description">
@@ -53,29 +53,29 @@
                         </p>
                     </div>
                     <div class="content-right">
-                        <img src="images/Song Leather_Bodies.jpg" alt="Project Image" class="section-image">
+                        <img loading="lazy" decoding="async" src="images/Song Leather_Bodies.jpg" alt="Project Image" class="section-image">
                     </div>
                 </div>
 
                 <div class="carousel-section">
                     <div class="carousel-container">
                         <div class="carousel-item">
-                            <img src="images/Song Leather_UT.jpg" alt="Carousel Image 1" class="carousel-image">
+                            <img loading="lazy" decoding="async" src="images/Song Leather_UT.jpg" alt="Song Leather photo 1" class="carousel-image">
                         </div>
                         <div class="carousel-item">
-                            <img src="images/Song Leather_UT2.jpg" alt="Carousel Image 1" class="carousel-image">
+                            <img loading="lazy" decoding="async" src="images/Song Leather_UT2.jpg" alt="Song Leather photo 2" class="carousel-image">
                         </div>
                         <div class="carousel-item">
-                            <img src="images/Song Leather_All1.jpg" alt="Carousel Image 1" class="carousel-image">
+                            <img loading="lazy" decoding="async" src="images/Song Leather_All1.jpg" alt="Song Leather photo 3" class="carousel-image">
                         </div>
                         <div class="carousel-item">
-                            <img src="images/Song Leather_All2.jpg" alt="Carousel Image 1" class="carousel-image">
+                            <img loading="lazy" decoding="async" src="images/Song Leather_All2.jpg" alt="Song Leather photo 4" class="carousel-image">
                         </div>
                         <div class="carousel-item">
-                            <img src="images/Song Leather_Gift.jpg" alt="Carousel Image 3" class="carousel-image">
+                            <img loading="lazy" decoding="async" src="images/Song Leather_Gift.jpg" alt="Song Leather photo 5" class="carousel-image">
                         </div>
                         <div class="carousel-item">
-                            <img src="images/Song Leather_Gift1.jpg" alt="Carousel Image 3" class="carousel-image">
+                            <img loading="lazy" decoding="async" src="images/Song Leather_Gift1.jpg" alt="Song Leather photo 6" class="carousel-image">
                         </div>
                     </div>
                 </div>
@@ -84,6 +84,8 @@
                     Click here to visit my Song Leather website!
                 </a>
 
+			</div>
+
 			<div id="bg"></div>
 
 			<script src="assets/js/jquery.min.js"></script>
@@ -91,41 +93,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const carousel = document.querySelector('.carousel-container');
-                const items = Array.from(carousel.querySelectorAll('.carousel-item'));
-                const itemWidth = items[0].offsetWidth;
-                const itemCount = items.length;
-                
-                carousel.querySelectorAll('.carousel-item').forEach(item => item.remove());
-                
-                const clonedItemsBefore = items.map(item => item.cloneNode(true));
-                const clonedItemsAfter = items.map(item => item.cloneNode(true));
-                const originalItems = items.map(item => item.cloneNode(true));
-                
-                clonedItemsBefore.forEach(item => carousel.appendChild(item));
-                originalItems.forEach(item => carousel.appendChild(item));
-                clonedItemsAfter.forEach(item => carousel.appendChild(item));
-                
-                carousel.scrollLeft = itemWidth * itemCount;
-                
-                carousel.addEventListener('wheel', (e) => {
-                    e.preventDefault();
-                    
-                    carousel.scrollLeft += (e.deltaX + e.deltaY)/2;
-                    
-                    const totalWidth = itemWidth * itemCount * 3;
-                    const currentPosition = carousel.scrollLeft;
-                    
-                    if (currentPosition >= itemWidth * itemCount * 2) {
-                        carousel.scrollLeft = currentPosition - (itemWidth * itemCount);
-                    } else if (currentPosition <= 0) {
-                        carousel.scrollLeft = currentPosition + (itemWidth * itemCount);
-                    }
-                });
-            });
-
-		</script>		
+			<script src="assets/js/carousel.js"></script>
 	</body>
 </html>
