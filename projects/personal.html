@@ -1,0 +1,87 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><!-- No user-scalable=no: blocking pinch-zoom is an accessibility failure. --><meta name="viewport" content="width=device-width, initial-scale=1"><title>Personal Projects — Max Song</title><meta name="description" content="Personal design projects — a multi-material iPhone case, a desk lamp with reusable electronics, and a dowel-and-3D-print shoe rack built for $9.09."><link rel="canonical" href="https://portfolio-max-song.github.io/projects/personal.html"><meta property="og:type" content="website"><meta property="og:title" content="Personal Projects — Max Song"><meta property="og:description" content="Personal design projects — a multi-material iPhone case, a desk lamp with reusable electronics, and a dowel-and-3D-print shoe rack built for $9.09."><meta property="og:url" content="https://portfolio-max-song.github.io/projects/personal.html"><meta property="og:image" content="https://portfolio-max-song.github.io/_astro/phone-case.nJNlwVFT_fjzyS.jpg"><meta name="twitter:card" content="summary_large_image"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600&display=swap"><link rel="stylesheet" href="/_astro/index.A3iHv0hi.css"></head> <body class="is-preload"> <nav class="floating-nav"> <a href="/" class="nav-logo"><b>Max Song</b></a> <div class="nav-buttons"> <a href="/#wrapper" class="nav-button"> <b>Home</b> </a><a href="/#about" class="nav-button"> <b>About</b> </a><a href="/#contact" class="nav-button"> <b>Contact</b> </a><a href="/projects.html" class="nav-button"> <b>Projects</b> </a><a href="/Song_Max_EngResume.pdf" class="nav-button" target="_blank" rel="noopener"> <b>Resume</b> </a> </div> </nav>  <div id="top" class="project-banner"> <div class="project-title-section"> <h1>Personal Projects</h1> <div class="title-underline"></div> </div> <div class="project-body"> <img src="/_astro/phone-case.nJNlwVFT_Z1rX2FN.webp" alt="3D printed iPhone case with TPU corner inserts" loading="eager" fetchpriority="high" decoding="async" width="1200" height="1200" class="section-image"> <p>These are personal-use projects with a much smaller scope — currently a phone
+case, a lamp, and a shoe rack. They’re where I try things without a deadline. I
+use Fusion 360 for most of them and print on a Bambu A1 I bought with the money
+from my freshman summer internship. Going forward I want to design more everyday
+objects and push harder on unfamiliar shapes, materials, and styles.</p>
+<h2 id="phone-case">Phone Case</h2>
+<p><img alt="Phone case CAD" loading="lazy" decoding="async" fetchpriority="auto" width="2115" height="1406" src="/_astro/phone-case-cad.DE0ksmtd_jBujy.webp" ></p>
+<p><strong>The problem:</strong> design a case that shows off the iPhone rather than hiding it,
+using far less material, without giving up protection. And design a MagSafe
+wallet using 3D printed parts, magnets, and leather.</p>
+<p><strong>Approach:</strong> I studied the heavy-duty cases from Mous and Spigen and worked
+backwards, stripping them down. I went through Pinterest and Instagram carefully,
+partly to confirm nobody had already made what I was picturing and partly to
+sanity-check that it would work at all. I wanted the case to print in one piece
+and snap on for a snug fit. The design uses interconnected PLA bumpers with TPU
+inserts to absorb impact — PLA deliberately, so that in the worst case the case
+cracks instead of the phone.</p>
+<p><strong>Outcome:</strong> I dropped it several times and the phone never cracked. (The screen
+protector did, but that can happen inside a full case too.) It reads as a bumper
+case but still follows the flow of the iPhone, which is what I was after. My only
+real regret is not finishing the wallet in time to carry it on my trip.</p>
+<p><img alt="MagSafe wallet CAD" loading="lazy" decoding="async" fetchpriority="auto" width="1454" height="1152" src="/_astro/wallet-cad.BxhsfRNf_Z1XMSyW.webp" ></p>
+<p><strong>What I’d change:</strong> the sides were thin, because a MagSafe wallet or charger
+still had to seat on the back, and one snapped when it caught on my pocket. The
+second iteration adds double railing on the sides, which also protects the front
+of the screen. The original TPU corner bumpers never made it into the carried
+version — without an enclosed printer the TPU prints failed consistently. I’m
+looking at SLA or SLS at Texas Inventionworks for the next one. For the wallet, I
+want spring steel sheets; the PETG I printed doesn’t hold enough pressure on the
+cards to make removal clean.</p>
+<h2 id="lamp">Lamp</h2>
+<p><img alt="Lamp CAD" loading="lazy" decoding="async" fetchpriority="auto" width="998" height="584" src="/_astro/lamp-cad-1.0VqL54_y_4A0ey.webp" ></p>
+<p><strong>The problem:</strong> my LED desk lamp worked well until the plastic base cracked from
+being bent too far. I wanted to keep the adjustable light, add color temperature
+control, and design and build every part except the electronics myself.</p>
+<p>The real goal was broader: build a lamp whose electronics are easily replicable,
+so the same package can drop into future projects — a light bar for the top of my
+monitor, a reading bar above my bed. That means a small form factor with easy
+adjustability.</p>
+<p><strong>Approach:</strong> I wanted something close to my old lamp but without moving parts,
+since that’s exactly what failed. The design went through several iterations, but
+I deliberately spent more time on the electronics than the shell.</p>
+<p><img alt="Lamp electronics layout" loading="lazy" decoding="async" fetchpriority="auto" width="1610" height="1038" src="/_astro/lamp-cad-2.BYnytDxu_36lJh.webp" ></p>
+<p><strong>Progress:</strong> this project has taught me most of what I know about integrating
+electronics into a print. My first iteration put the batteries in series and used
+two buck converters — two because the LED strip wants 12 V and the microcontroller
+wants 5 V. That was an inefficient use of power and the current was too low to
+keep up. The second iteration puts the batteries in parallel and uses two voltage
+boosters, which are also far smaller than the buck converters. Right now I’m
+working on making the lamp structurally sound despite printing in multiple parts.</p>
+<h2 id="shoe-rack">Shoe Rack</h2>
+<p><img alt="Shoe rack CAD" loading="lazy" decoding="async" fetchpriority="auto" width="610" height="284" src="/_astro/shoe-rack-cad.BCy23RBz_Z3UyQV.webp" ></p>
+<p><strong>The problem:</strong> after a few months in an apartment I had a pile of shoes outside
+my door. I wanted a rack with no screws or adhesive, modifiable dimensions, easy
+assembly and disassembly for moving, built from materials I already had — and
+above all, cheaper than buying one.</p>
+<p>I took it up during finals week as a break from studying, aiming to finish before
+I left for break.</p>
+<p><strong>Approach:</strong> in middle and high school I did Odyssey of the Mind, which involved
+building skit props, often out of PVC. I had bulk birch dowels left over from Song
+Leather, and realized I only needed to design the connectors to hit every one of
+my goals — and that 3D printing them would make it cheap. For the look, I wanted
+the hybrid of woodworking and 3D printing to be the point, so white connectors
+against light birch.</p>
+<p><img alt="Assembled shoe rack" loading="lazy" decoding="async" fetchpriority="auto" width="1454" height="1240" src="/_astro/shoe-rack.CtCv-xVz_13SFLB.webp" ></p>
+<p><strong>Outcome:</strong> the dowels were uneven, so the tolerances had to leave room without
+needing epoxy or CA glue. I printed at 10% infill but with 3 wall loops for
+press-fit strength. The print used about 450 g of PLA at $8.99/kg bulk from
+Kingroon — $4.05. Checking my old order, 25 dowels cost $21, so $0.84 each; the
+4-foot rack takes 6, or $5.04.</p>
+<p><strong>Total: $9.09.</strong> Comparable racks on Amazon average around $23, and those are
+metal. I’ll call that a success.</p>
+<p><strong>What I’d change:</strong> a finishing oil on the dowels would help the tolerances,
+since the wood expands as it absorbs oil. I’d also add a hole through the
+connectors so the rack can be screwed down if I ever land somewhere permanent —
+and screwing into the wood would let it expand into a better fit.</p> </div> <p class="section-description project-skills"> <b>Skills: </b>Iterative Design, Material Selection, Electronics Integration, Cost Analysis </p> <div class="carousel-section"> <div class="carousel-container"> <div class="carousel-item"> <img src="/_astro/overview.BdsWGPvK_Z2hK1Yx.webp" alt="A selection of personal projects" loading="lazy" decoding="async" fetchpriority="auto" width="600" height="600" class="carousel-image"> </div><div class="carousel-item"> <img src="/_astro/phone-case.nJNlwVFT_Z31zi2.webp" alt="Finished phone case on the phone" loading="lazy" decoding="async" fetchpriority="auto" width="600" height="600" class="carousel-image"> </div><div class="carousel-item"> <img src="/_astro/lamp-cad-1.0VqL54_y_2fq0p3.webp" alt="Desk lamp CAD model" loading="lazy" decoding="async" fetchpriority="auto" width="600" height="600" class="carousel-image"> </div><div class="carousel-item"> <img src="/_astro/shoe-rack.CtCv-xVz_Z1y0IIP.webp" alt="Assembled dowel-and-connector shoe rack" loading="lazy" decoding="async" fetchpriority="auto" width="600" height="600" class="carousel-image"> </div> </div> </div>  <a href="/projects.html" class="back-link">&larr; All projects</a> </div>  <div id="bg"></div> <script>
+      // The Dimension template shipped jQuery + 400 lines of article-modal
+      // machinery, but this site has no #main, no <article>, and no #footer —
+      // every one of those handlers ran against an empty set. The only thing
+      // that mattered was dropping .is-preload to release the entry animation.
+      window.addEventListener('load', function () {
+        setTimeout(function () {
+          document.body.classList.remove('is-preload');
+        }, 100);
+      });
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    </script> </body> </html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><!-- No user-scalable=no: blocking pinch-zoom is an accessibility failure. --><meta name="viewport" content="width=device-width, initial-scale=1"><title>Record Player — Max Song</title><meta name="description" content="An RFID-driven record player built from repurposed electronics and a Raspberry Pi, using the Spotify API — designed to make music effortless to reach."><link rel="canonical" href="https://portfolio-max-song.github.io/projects/record-player.html"><meta property="og:type" content="website"><meta property="og:title" content="Record Player — Max Song"><meta property="og:description" content="An RFID-driven record player built from repurposed electronics and a Raspberry Pi, using the Spotify API — designed to make music effortless to reach."><meta property="og:url" content="https://portfolio-max-song.github.io/projects/record-player.html"><meta property="og:image" content="https://portfolio-max-song.github.io/_astro/finished-1.Dd1DwyFE_Z1OBTHm.jpg"><meta name="twitter:card" content="summary_large_image"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600&display=swap"><link rel="stylesheet" href="/_astro/index.A3iHv0hi.css"></head> <body class="is-preload"> <nav class="floating-nav"> <a href="/" class="nav-logo"><b>Max Song</b></a> <div class="nav-buttons"> <a href="/#wrapper" class="nav-button"> <b>Home</b> </a><a href="/#about" class="nav-button"> <b>About</b> </a><a href="/#contact" class="nav-button"> <b>Contact</b> </a><a href="/projects.html" class="nav-button"> <b>Projects</b> </a><a href="/Song_Max_EngResume.pdf" class="nav-button" target="_blank" rel="noopener"> <b>Resume</b> </a> </div> </nav>  <div id="top" class="project-banner"> <div class="project-title-section"> <h1>Record Player</h1> <div class="title-underline"></div> </div> <div class="project-body"> <img src="/_astro/finished-1.Dd1DwyFE_1Q2LhI.webp" alt="The finished record player" loading="eager" fetchpriority="high" decoding="async" width="1200" height="978" class="section-image"> <p>In 2021 my sister suffered a severe injury that left her with chronic back pain.
+I wanted to comfort her the way I know how, which is by making something. Music
+was clearly helping, so I set out to make her favorite songs easier to reach.</p>
+<p>Research turned up two ideas I liked: a record player, and a speaker that used
+RFID to trigger songs. I combined them, and built the result out of parts I
+already had — a battery from a dead power bank, drivers from a water-damaged
+speaker, and an old Raspberry Pi.</p>
+<p><strong>The problem:</strong> design a device that plays any of my sister’s favorite songs
+with as little friction as possible, reusing existing electronics.</p>
+<h2 id="design-process">Design Process</h2>
+<p><img alt="Record player CAD" loading="lazy" decoding="async" fetchpriority="auto" width="1110" height="766" src="/_astro/cad-2.DQyDODq-_aQaXU.webp" ></p>
+<p>The work fell into three phases.</p>
+<p><strong>Research and design.</strong> Once I’d settled on a turntable form, I looked at both
+vintage and modern versions. My manufacturing options were limited, so I took a
+functionality-first approach and let the components drive the design rather than
+the materials.</p>
+<p><strong>Electronics and software.</strong> I bought an RFID reader and repurposed an old
+Raspberry Pi 2, a speaker, and a battery. I used the Spotify API to reach my
+sister’s library. The Pi 2 would have been fine for local playback, but needing
+Wi-Fi pushed me to a Pi 4. This was the hardest phase and my favorite — it’s
+where I got interested in Python.</p>
+<p><img alt="Internal layout" loading="lazy" decoding="async" fetchpriority="auto" width="1020" height="698" src="/_astro/cad-3.BQIf47ib_1RvNT.webp" ></p>
+<p><strong>Testing.</strong> By far the most time-consuming part. I hadn’t worked with
+electronics before, so I spent most of it troubleshooting hardware and software
+in roughly equal measure.</p>
+<h2 id="outcome">Outcome</h2>
+<p><img alt="Assembled record player CAD" loading="lazy" decoding="async" fetchpriority="auto" width="1106" height="768" src="/_astro/cad-1.D7vAfJxi_Z9fVvo.webp" ></p>
+<p>It works, and it does what I built it for. Along the way I picked up Fusion 360
+and Raspberry Pi fluency that carried straight into later projects.</p>
+<p><strong>What I’d do differently:</strong> as one of my first projects, this mostly taught me
+project management. Without a defined timeline I disappeared down rabbit holes on
+details that didn’t matter and put off the parts that looked intimidating.</p>
+<p>Technically, the components need a real mounting strategy — the buttons and knobs
+are held with superglue and roughly dimensioned slots, and I’d rather have screw
+bosses for the Pi and everything else. I’d add external speakers for sound
+quality, and get closer to a real record player with an actual motor and needle.</p> </div> <p class="section-description project-skills"> <b>Skills: </b>Electronics &amp; Circuit Design, Python &amp; API Integration, Raspberry Pi, CAD &amp; 3D Printing </p> <div class="carousel-section"> <div class="carousel-container"> <div class="carousel-item"> <img src="/_astro/finished-3.BC1qYh_B_Z1OrE4l.webp" alt="Record player with a card on the platter" loading="lazy" decoding="async" fetchpriority="auto" width="600" height="600" class="carousel-image"> </div><div class="carousel-item"> <img src="/_astro/finished-2.BzymTI5L_Zyg69e.webp" alt="Record player side view" loading="lazy" decoding="async" fetchpriority="auto" width="600" height="600" class="carousel-image"> </div><div class="carousel-item"> <img src="/_astro/finished-1.Dd1DwyFE_2S1ol.webp" alt="Record player front view" loading="lazy" decoding="async" fetchpriority="auto" width="600" height="600" class="carousel-image"> </div> </div> </div>  <a href="/projects.html" class="back-link">&larr; All projects</a> </div>  <div id="bg"></div> <script>
+      // The Dimension template shipped jQuery + 400 lines of article-modal
+      // machinery, but this site has no #main, no <article>, and no #footer —
+      // every one of those handlers ran against an empty set. The only thing
+      // that mattered was dropping .is-preload to release the entry animation.
+      window.addEventListener('load', function () {
+        setTimeout(function () {
+          document.body.classList.remove('is-preload');
+        }, 100);
+      });
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    </script> </body> </html>
